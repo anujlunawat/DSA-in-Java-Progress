@@ -1,12 +1,12 @@
 public class RemoveA {
     public static void main(String[] args) {
-        String s = "bcd";
+        String s = "bcdaaabdcafd";
 
-//        System.out.println(remove(s));
+        System.out.println(remove(s));
 //        System.out.println(remove2(s));
 //        System.out.println(remove3(s, 0));
 //        System.out.println(skipApple("an apple a day, keeps the apple man busy"));
-        System.out.println(skipAppNotApple("an apple a day, appkappeeps the appapple man busy"));
+//        System.out.println(skipAppNotApple("an apple a day, appkappeeps the appapple man busy"));
 
     }
 
@@ -20,7 +20,7 @@ public class RemoveA {
                 return s.charAt(i) + remove(s.substring(i+1));
             i++;
         }
-        return remove(s);
+        return "";
     }
 
     static String remove2(String s){

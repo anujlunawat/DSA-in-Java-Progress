@@ -8,9 +8,9 @@ public class Permutation {
         String str = "abc";
         List<String> s = new ArrayList<>();
         s = permutations("", str);
-        System.out.println(s);
-//        permutations2("", str);
-        System.out.println(permutationsCount("", "abc"));
+//        System.out.println(s);
+        permutations2("", str);
+//        System.out.println(permutationsCount("", "abc"));
     }
 
     static List<String> permutations(String p, String up){

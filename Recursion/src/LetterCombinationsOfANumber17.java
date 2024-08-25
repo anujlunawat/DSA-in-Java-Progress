@@ -1,31 +1,29 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-public class LetterCombinationsOfANumber17 {
+class LetterCombinationsOfANumber17 {
     public static void main(String[] args) {
-        System.out.println(letterCombinations("23"));
+        String t = "79";
+        System.out.println(letterCombinations("", t));
     }
 
-    public static List<String> letterCombinations(String digits) {
-        return combinations(digits, "", "abc");
-    }
-
-    public static List<String> combinations(String digits, String p, String up){
-        if(up.isEmpty())
-            return Collections.singletonList(p);
-
-        List<String> t = new ArrayList<>();
-
-        for(char num: digits.toCharArray()){
-            int s = 97 + (num-2)*3;
-            int limit = (num == '9' ? 4 : 3);
-
-            for (int i = s; i < s+limit; i++) {
-                p = p + (char)i;
-                t.addAll(combinations("", p, up.substring(1)));
-            }
+   static ArrayList<String> letterCombinations(String p, String up){
+        if(up.isEmpty()){
+            ArrayList<String> temp = new ArrayList<>();
+            temp.add(p);
+            return temp;
         }
-        return t;
-    }
+
+        ArrayList<String> ans = new ArrayList<>();
+
+        int letter = up.charAt(0) - '0';
+        int start = (letter - 2) * 3 + (letter > 7 ? 1 : 0);
+        int end = (start + 3) + (letter==7 || letter==9 ? 1 : 0);
+
+        for(int i = start; i < end; i++){
+            char t = (char)('a' + i);
+            ans.addAll(letterCombinations(p+t, up.substring(1)));
+        }
+        return ans;
+   }
 }
