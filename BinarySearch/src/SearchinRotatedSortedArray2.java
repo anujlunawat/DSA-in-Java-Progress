@@ -1,3 +1,5 @@
+package src;
+
 public class SearchinRotatedSortedArray2 {
 
     public static void main(String[] args){
@@ -32,7 +34,7 @@ public class SearchinRotatedSortedArray2 {
                 end = mid-1;
 
             else
-                start = mid+1;
+                start = start+1;
         }
         return start;
     }

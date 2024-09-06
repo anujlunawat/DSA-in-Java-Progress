@@ -11,10 +11,15 @@ public class nQueens {
         };
 
         String[][] board1 = {
-                {"X", "X", "X", "X"},
-                {"X", "X", "X", "X"},
-                {"X", "X", "X", "X"},
-                {"X", "X", "X", "X"},
+                {"X", "X", "X", "X", "X", "X", "X", "X" },
+                {"X", "X", "X", "X", "X", "X", "X", "X" },
+                {"X", "X", "X", "X", "X", "X", "X", "X" },
+                {"X", "X", "X", "X", "X", "X", "X", "X" },
+                {"X", "X", "X", "X", "X", "X", "X", "X" },
+                {"X", "X", "X", "X", "X", "X", "X", "X" },
+                {"X", "X", "X", "X", "X", "X", "X", "X" },
+                {"X", "X", "X", "X", "X", "X", "X", "X" },
+
         };
 //        nQueensProblem(board, 0, 0);
         nQueensProblemStr(board1, 0);

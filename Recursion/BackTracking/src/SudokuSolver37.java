@@ -56,9 +56,7 @@ public class SudokuSolver37 {
     static boolean conditions(char[][] board, int r, int c, char num){
 //        check row and col
         for(int i = 0; i < board.length; i++){
-            if(board[r][i] == num)
-                return false;
-            if(board[i][c] == num)
+            if(board[r][i] == num || board[i][c] == num)
                 return false;
         }
 
@@ -75,4 +73,3 @@ public class SudokuSolver37 {
         return true;
     }
 }
-

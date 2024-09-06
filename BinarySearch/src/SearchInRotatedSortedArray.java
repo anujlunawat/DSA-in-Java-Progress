@@ -1,3 +1,5 @@
+package src;
+
 public class SearchInRotatedSortedArray {
     public static void main(String[] args) {
         int[] nums = {5,1,2};

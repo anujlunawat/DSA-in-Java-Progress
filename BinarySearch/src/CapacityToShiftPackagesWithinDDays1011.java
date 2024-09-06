@@ -1,3 +1,7 @@
+package src;
+
+import java.util.Arrays;
+
 public class CapacityToShiftPackagesWithinDDays1011 {
     public static void main(String[] args) {
         int[] weights = {1,2,3,1,1};
