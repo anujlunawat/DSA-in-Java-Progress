@@ -17,7 +17,7 @@ public class RemoveDuplicatesFromSortedLL83 {
     }
 
     public ListNode deleteDuplicates(ListNode head) {
-        if(head.next == null)
+        if(head == null || head.next == null)
             return head;
         if(head.val == head.next.val){
             head.next = head.next.next;

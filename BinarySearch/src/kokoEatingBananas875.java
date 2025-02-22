@@ -56,7 +56,7 @@ public class kokoEatingBananas875 {
     static int maxEle(int[] nums){
         int max = nums[0];
         for(int x: nums)
-            max = x>max ? x : max;
+            max = Math.max(x, max);
         return max;
     }
 }
