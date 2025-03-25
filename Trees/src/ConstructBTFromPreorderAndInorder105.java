@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ConstructBTFromPreorderAndInorder105 {
     public static class TreeNode {
       int val;
@@ -26,12 +28,13 @@ public class ConstructBTFromPreorderAndInorder105 {
             return root;
 
 //        index value of root in inorder array
-        int rootInInorder = search(inorder, 0, root.val);
+        int rootInInorder = search(inorder, inorderStart, root.val);
 
 //        go left
-        root.left = helper(preorder, inorder, inorderStart, rootInInorder - 1, preorderStart + 1);
+        preorderStart += 1;
+        root.left = helper(preorder, inorder, inorderStart, rootInInorder - 1, preorderStart);
 //        go right
-        preorderStart = preorderStart + 1 + (rootInInorder - inorderStart);
+        preorderStart += (rootInInorder - inorderStart);
         root.right = helper(preorder, inorder, rootInInorder + 1, inorderEnd, preorderStart);
 
         return root;
@@ -42,10 +45,32 @@ public class ConstructBTFromPreorderAndInorder105 {
             return ind;
         return search(arr, ind+1, target);
     }
-    public static void main(String[] args) {
-        int[] inorder = {1,2};
-        int[] preorder = {1, 2};
 
-        System.out.println(buildTree(preorder, inorder).val);
+    private static TreeNode buildTree2(int[] preorder, int[] inorder){
+        if(inorder.length == 0 || preorder.length == 0)
+            return null;
+
+        TreeNode root = new TreeNode(preorder[0]);
+        if(inorder.length == 1)
+            return root;
+
+        int rootIndex = search(inorder, 0, root.val);
+
+//        go left
+        int preorderEnd = rootIndex + 1;
+        root.left = buildTree2(Arrays.copyOfRange(preorder, 1, preorderEnd), Arrays.copyOfRange(inorder, 0, rootIndex));
+
+//        go right
+        int preorderStart = preorderEnd;
+        root.right = buildTree2(Arrays.copyOfRange(preorder, preorderStart, preorder.length), Arrays.copyOfRange(inorder, rootIndex+1, inorder.length));
+
+        return root;
+    }
+
+    public static void main(String[] args) {
+        int[] inorder = {9,3,15,20,7};
+        int[] preorder = {3,9,20,15,7};
+
+        System.out.println(buildTree2(preorder, inorder).val);
     }
 }

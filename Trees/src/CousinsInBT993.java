@@ -60,6 +60,8 @@ public class CousinsInBT993 {
         return isSiblings(node.left, x, y) || isSiblings(node.right, x, y);
     }
 
+    private static 
+
    public static void main(String[] args) {
        // Constructing the tree manually in the main method
        TreeNode root = new TreeNode(1);

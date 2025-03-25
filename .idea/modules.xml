@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/ArraySorting/ArraySorting.iml" filepath="$PROJECT_DIR$/ArraySorting/ArraySorting.iml" />
       <module fileurl="file://$PROJECT_DIR$/Recursion/BackTracking/BackTracking.iml" filepath="$PROJECT_DIR$/Recursion/BackTracking/BackTracking.iml" />
       <module fileurl="file://$PROJECT_DIR$/CodeForces/CodeForces.iml" filepath="$PROJECT_DIR$/CodeForces/CodeForces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DynamicProgramming/DynamicProgramming.iml" filepath="$PROJECT_DIR$/DynamicProgramming/DynamicProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Heaps/Heaps.iml" filepath="$PROJECT_DIR$/Heaps/Heaps.iml" />
       <module fileurl="file://$PROJECT_DIR$/IdeaProjects.iml" filepath="$PROJECT_DIR$/IdeaProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedLists/LinkedLists.iml" filepath="$PROJECT_DIR$/LinkedLists/LinkedLists.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP/OOP.iml" filepath="$PROJECT_DIR$/OOP/OOP.iml" />
